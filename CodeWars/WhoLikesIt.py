@@ -22,17 +22,13 @@ def likes(names):
     
     if names:
         if len(names) == 1:
-            textReturn = names[0] + " likes this"
-        elif (len(names) > 1 and len(names) < 4):
-            for name in range(0, len(names) - 1):
-                textReturn = textReturn + names[name] + ", "
-            textReturn = textReturn[:-2]
-            textReturn = textReturn + " and " + str(names[len(names) - 1]) + " like this"
+            textReturn = names[0] +' likes this'
+        elif len(names) == 2:
+            textReturn = names[0] +' and '+ names[1] +' like this'
+        elif len(names) == 3:
+            textReturn = names[0] +', '+ names[1] +' and '+ names[2] +' like this'
         else:
-            for name in range(0, 2):
-                textReturn = textReturn + names[name] + ", "
-            textReturn = textReturn[:-2]
-            textReturn = textReturn + " and " + str(len(names)-2) + " others like this"
+            textReturn = names[0] +', '+ names[1] +' and '+ str(len(names)-2) +' others like this'
     else:
         textReturn = "no one likes this"
     return textReturn 
