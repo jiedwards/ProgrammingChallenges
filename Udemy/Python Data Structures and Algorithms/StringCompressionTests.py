@@ -2,7 +2,7 @@ import unittest
 
 class mainFunctionTests(unittest.TestCase):
 
-		def test_anagram_validation(self):
+		def test_compression_validation(self):
 			from StringCompression import compress
 			self.assertEqual(compress(''), 'Invalid input length.')
 			self.assertEqual(compress('AABBCC'), 'A2B2C2')
